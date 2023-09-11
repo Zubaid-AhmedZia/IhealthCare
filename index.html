@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Smart Contract</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container" style="background-color: #608be6">
+        <h1>Healthcare System</h1>
+        <button id="connectWallet" onclick="connectWallet()">
+          Connect to MetaMask
+        </button>
+        <br/>
+        <br/>
+        <div id="walletStatus" class="disconnected">Disconnected</div>
+      </div>
+
+      <section class="action-section">
+        <label>Doctor Address:</label>
+        <input
+          type="text"
+          id="doctorAddress"
+          placeholder="Enter doctor's address"
+        />
+
+        <label>Service:</label>
+        <input type="text" id="service" placeholder="Enter service name" />
+
+        <br />
+        <br />
+        <button id="makeAppointment" onclick="makeAppointment()">
+          Make Appointment
+        </button>
+        <br />
+        <br />
+        <button id="cancelAppointment" onclick="cancelAppointment()">
+          Cancel Appointment
+        </button>
+        <br />
+        <br />
+        <button id="appointmentCompleted" onclick="appointmentCompleted()">Mark Appointment as Completed</button>
+        <br />
+        <br />
+        <button id="withdraw" onclick="withdraw()">Withdraw</button>
+      </section>
+
+      <h2>Admin Functions</h2>
+
+      <div class="admin-action">
+        <label for="doctorAddress">Doctor Address:</label>
+        <input
+          type="text"
+          id="doctorAddress"
+          placeholder="Enter doctor's address"
+        />
+        <br/>
+        <br/>
+        <button id="registerDoctorBtn" onclick="registerDoctorBtn()">Register Doctor</button>
+      </div>
+
+      <div class="admin-action">
+        <label for="patientAddress">Patient Address:</label>
+        <input
+          type="text"
+          id="patientAddress"
+          placeholder="Enter patient's address"
+        />
+        <br/>
+        <br/>
+        <button id="registerPatientBtn" onclick="registerPatientBtn()">Register Patient</button>
+      </div>
+
+      <div class="admin-action">
+        <label for="serviceName">Service:</label>
+        <input type="text" id="serviceName" placeholder="Enter service name" />
+        <label for="serviceFee">Fee (in wei):</label>
+        <input type="text" id="serviceFee" placeholder="Enter service fee" />
+        <br/>
+        <br/>
+        <button id="setServiceFeeBtn" onclick="setServiceFeeBtn()">Set Service Fee</button>
+      </div>
+
+      <footer>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p>Powered by Web3.0</p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+      type="application/javascript"
+    ></script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
